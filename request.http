@@ -1,0 +1,43 @@
+### ALL TASKS
+GET http://localhost:8080/users/login/todo/list/all?name=Divyanshu&password=Dvishu@11010 HTTP/1.1
+
+### PENDING TASKS
+GET http://localhost:8080/users/login/todo/list/Pending?name=Divyanshu&password=Dvishu@11010 HTTP/1.1
+
+### COMPLETED TASKS
+GET http://localhost:8080/users/login/todo/list/Done?name=Divyanshu&password=Dvishu@11010 HTTP/1.1
+
+### SIGN UP
+POST http://localhost:8080/users HTTP/1.1
+Content-Type: : application/json
+
+{
+  "name": "Divyanshu",
+  "password": "Dvishu@11010"
+}
+
+### ADD TASKS
+POST http://localhost:8080/users/login/todo/add?name=Divyanshu&password=Dvishu@11010 HTTP/1.1
+Content-Type: : application/json
+
+{
+  "Task": "DSA"
+}
+
+### UPDATE TASK'S STATUS
+PUT http://localhost:8080/users/login/todo/update?name=Divyanshu&password=Dvishu@11010 HTTP/1.1
+Content-Type: : application/json
+
+{
+  "task": "DSA"
+}
+
+### DELETE TASK
+DELETE http://localhost:8080/users/login/todo/delete/DSA?name=Divyanshu&password=Dvishu@11010 HTTP/1.1
+
+
+### DELETE ALL TASKS
+DELETE http://localhost:8080/users/login/todo/delete/all?name=Divyanshu&password=Dvishu@11010 HTTP/1.1
+
+### GET HEADER OF USER'S TASKS LIST
+HEAD http://localhost:8080/users/login/todo/list/all?name=Divyanshu&password=Dvishu@11010  HTTP/1.1
